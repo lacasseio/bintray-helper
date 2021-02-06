@@ -1,0 +1,8 @@
+.DS_Store
+.venv
+dl.*/
+__pycache__
+
+urls.txt
+log.txt
+

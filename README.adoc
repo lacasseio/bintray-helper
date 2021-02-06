@@ -1,0 +1,13 @@
+= Bintray Helper
+
+This helper is strictly to ease the migration away from Bintray given link:https://jfrog.com/blog/into-the-sunset-bintray-jcenter-gocenter-and-chartcenter/[their recent announcement].
+
+It is recommended to use a VPN to avoid any IP banning from Bintray ;)
+
+```
+$ python3 -m venv .venv
+$ source .venv/bin/activate
+$ pip install -r requirements.txt
+$ scrapy runspider --nolog bintray.py -a slug=<org/repo> > urls.txt
+$ wget -e robots=off --input-file - --output-file log.txt --force-directories < urls.txt
+```
